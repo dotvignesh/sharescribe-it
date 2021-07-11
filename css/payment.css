@@ -1,0 +1,22 @@
+
+	body{
+		font-family: 'Montserrat', sans-serif;
+	}
+	.payment{
+		margin-left: 10px;
+		margin-bottom: 20px;
+	}
+	.pay-method{
+		border: 0px 0px 5px 0px #FF416C;
+		margin-bottom: 15px;
+
+	}
+
+	.text{
+		margin: 10px;
+	}
+
+	.confirm-pay{
+		float: right;
+	}
+	

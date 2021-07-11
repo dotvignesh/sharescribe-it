@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Sharing</title>
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <!-- Landin Page Container -->
+    <div class="container">
+
+        <div class="welcome-box">
+
+            <!-- Welcome content -->
+            <div class="content">
+                <h1>Hello!</h1>
+                <h3>Welcome To Sharescribe It<br>Share Subscriptions, Save Money 💰</h3>
+            </div>
+
+        </div>
+
+        <div class="reg-box">
+
+            <!-- Registration Form -->
+            <div class="content">
+                <h1>Sign Up Or Login:</h1>
+
+                <form action="php/register.php" method="POST">
+                    <span id='username-alert' style="color:red;"></span>
+                    <input type="text" placeholder="Username" name="username" id='username'>
+                    <span id='password-alert' style="color:red;"></span>
+                    <input type="password" placeholder="Password" name="password" id='password'>
+                    <span id='password-req' style="color:red;"></span>
+
+                    <button type='button' id='submit' onclick='check()'>Let's Go</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        console.log('VALIDATED PASSWORDS:\n\
+            1. 1@3qweRty\n\
+            2. 1@5^AbcD\n\
+            3. 1#0Xyz$$\n\
+            4. QWERty$10\n\
+            5. P@$$w0Rd\n\
+            6. U$3rn@m3\n\
+            7. $H@r1ing\n\
+            8. M3ntor@nn@ ');
+
+
+
+        document.addEventListener('keyup', function (event) {
+
+            if (event.keyCode === 13)
+                document.getElementById('submit').click();
+
+        });
+
+        function check() {
+
+            let uname = document.getElementById('username').value;
+            let pass = document.getElementById('password').value;
+
+            patt1 = /.{8,20}/g;
+            patt2 = /[a-z]/g;
+            patt3 = /[A-Z]/g;
+            patt4 = /[!@#\$%\*_]/g;
+            patt5 = /\d/g;
+
+            var res1 = pass.match(patt1);
+            var res2 = pass.match(patt2);
+            var res3 = pass.match(patt3);
+            var res4 = pass.match(patt4);
+            var res5 = pass.match(patt5);
+
+            if (uname.trim().length != 0) {
+
+                document.getElementById('username-alert').innerHTML = '';
+            }
+
+            if (pass.trim().length != 0) {
+
+                document.getElementById('password-alert').innerHTML = '';
+            }
+
+            if (uname.trim().length === 0) {
+
+                document.getElementById('username-alert').innerHTML = '* Please enter a valid username'
+            }
+
+            else if (pass.trim().length === 0) {
+
+                document.getElementById('password-alert').innerHTML = '* Please enter a valid password';
+            }
+
+            else if ((!res1) || (!res2) || (!res3) || (!res4) || (!res5)) {
+
+                document.getElementById('password-req').innerHTML = `* Password must contain between 8 to 20 characters <br>
+                  Must contain at least one 
+                <ul>
+                <li>Special character </li>
+                <li>Digit </li>
+                <li>Lowercase and uppercase character </li>
+                </ul> `;
+            }
+
+            else
+                document.getElementById('submit').removeAttribute('type');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

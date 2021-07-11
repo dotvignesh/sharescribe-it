@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.main {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.mt {
+	margin-top: 50px;
+}
+
+.mt-2 {
+	margin-top: 80px;
+}
+
+.welcome{
+	height: 1em;
+	/* text-align: center; */
+	margin-top: 40px;
+	font-size: 2.5em;
+	color: #d13459; 
+	/* background-color: #FFFF;
+    border-radius: 20px;
+    box-shadow: 10px 10px #d13459; */
+    /* transition: box-shadow 1s;
+    display: flex;
+    flex-direction: row; */
+}
+
+.tellus{
+	width: 500px;
+	height: 2em;
+	justify-content: center;
+	font-size: 1.5em;
+}
+
+.cost{
+	display:  none;
+}
+
+.input-cost{	
+
+	visibility: visible;
+    display: block;
+    width: relative;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: 0;
+    border:none;
+    border-bottom: 1px solid #FF416C;
+    padding: 5px 10px;
+    outline: none;
+    padding: 10px;
+    transition: 0.6s ease all;
+}
+
+.input-cost:focus{
+
+    border:1px solid #FF416C;
+
+}
+
+
+input{
+	visibility: hidden;
+}
+.question{
+	font-size: 1.3em;
+}
+span{
+	color:  #FFFF;
+	font-size: 20px;
+	background-color: #d13459;
+	border-radius: 20px;
+	width: 200px;
+	padding: 10px;
+}
+
+input:checked+span {
+	opacity: 0.5;
+}
+
+.next{
+	float: right;
+	margin-top: 50px;
+}
+
+button {
+	color:  #FFFF;
+	font-size: 20px;
+	background-color: #d13459;
+	border-radius: 20px;
+	border: none;
+	padding: 10px 20px;
+}
+
+button:hover {
+	cursor: pointer;
+}

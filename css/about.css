@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body {
+	    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container{
+
+	font-family: 'Montserrat', sans-serif;
+	width: 80%;
+	height: 2em;
+	float:  left;
+}
+
+.about{
+
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	width: 80%;
+    height: 350px;
+    margin:0px auto;
+    background-color: #FFFF;
+    border-radius: 20px;
+    box-shadow: 10px 10px #d13459;
+    transition: box-shadow 1s;
+
+}
+
+button {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 5px 15px;
+    color: white;
+    background-color: #FF416C;
+    border: none;
+    border-radius: 10px;	
+    transition: transform 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-30%);
+    color: #FF416C;
+    border:1px solid #FF416C;
+    background: none;
+    box-shadow: 0 0.5em 0.5em -0.2em #d13459;
+}
+
+.team{
+
+	font-size: 1.8em;
+}
+
+.esaki, .kavish, .raghul{
+	height: 300px;
+}
+.esaki-img, .raghul-img{
+	margin: 5px;
+	padding: 20px;
+	float: left;
+}
+
+.kavish-img{
+	margin: 5px;
+	padding: 20px;
+	float: right;
+}
+
+.esaki-text, .kavish-text, .raghul-text{
+
+	font-size: 1.5em;
+}
+
+.raghul-text:hover, .kavish-text:hover, .esaki-text:hover{
+
+	font-size: 1.9em;
+}
+
+.raghul-img:hover, .kavish-img:hover, .esaki-img:hover{
+
+	height: 265px;
+	width: 265px;
+}
