@@ -47,3 +47,36 @@ register.php :
  
 signin.php :
       Provides a sign in message if the username and password entered in index.html already exist in the database.
+      
+preferences.php :   
+      Requests users to select subscription categories out of the five that they                                                                                                                        are interested in and additionally their current subscription costs.
+ 
+interests.php : 
+      Passes the values selected by user in preferences.php to a table ‘subscriptions’.
+ 
+home_page.php : 
+      Displays the requisite subscriptions that the user is interested in which upon clicking takes them to listings.php. 
+ 
+profilepage.php :  
+      Displays information about the current user along with an option to their interests and subscription preferences.
+ 
+updatepreferences.php :  
+      Updates the users preferences to the ‘user_preferences’ table.
+ 
+add_subscriptions.php :  
+      For users who have a subscription active currently, enables them to add the details of their subscription including the subscription service, cost, billing cycle, and the username and password for the said subscriptions.
+ 
+add.php : 
+      Adds the subscription details if added by the user to the ‘subscriptions’ table.
+ 
+listings.php :  
+      Displays the available subscriptions, subscribed to and willing to share by our users to other users to purchase. Also provides them access to official sites of the service if none are available to share.
+ 
+payment.php :  
+      Displays a payment page with form validation for credit card details.   
+ 
+processing.php :  
+      Follow up processing page for payment.php.
+ 
+update_num_users  : 
+      Updates the column ‘num_users_sharing’ in the subscriptions table by one.
